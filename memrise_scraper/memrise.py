@@ -118,10 +118,9 @@ def dump_course2json(*, course_url:str, to_add_pinyin:bool):
     courseData = CourseDataHolder(course_url.split('/')[3])
 
     for level_url, title in course.levels:
-        # print("*** %s (%s)" % (title, level_url))
+        print("*** %s (%s)" % (title, level_url))
         temp = []
         for card in course.cards(level_url=level_url):
-            # print('\t'.join(card))
             cols = list(card)
             row_obj = {}
 
